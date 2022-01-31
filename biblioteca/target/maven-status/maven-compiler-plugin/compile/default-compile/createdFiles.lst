@@ -1,3 +1,5 @@
-entity\Main.class
+interfaz\interfaz.class
 DAO\DAO.class
+entity\Main.class
+loxica\Loxica.class
 entity\Libro.class

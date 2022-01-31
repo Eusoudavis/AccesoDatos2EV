@@ -49,22 +49,32 @@ public class DAO implements interfaz<Libro, String> {
     @Override
     public void update(Libro libro) {
         conection();
-        Libro lib = new Libro();
-        lib.setIsbn(libro.getIsbn());
+        Libro lib = em.find(Libro.class, libro.getIsbn());
+        if (lib !=null){
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
         lib.setTitulo(libro.getTitulo());
         lib.setAutor(libro.getAutor());
         lib.setPrecio(libro.getPrecio());
-        em.getTransaction().commit();
+        tx.commit();
+        }else {
+            System.out.println("Este libro non existe");
+        }
         disconection();
     }
 
     @Override
     public void delete(Libro libro) {
 		conection();
+        Libro libroDelete = em.find(Libro.class, libro.getIsbn());
+        if (libroDelete != null ){
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		em.remove(libro);
+		em.remove(libroDelete);
 		tx.commit();
+        }else {
+            System.out.println("Este libro non existe");
+        }
 		disconection();
     }
 	

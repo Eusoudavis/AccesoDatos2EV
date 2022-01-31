@@ -41,14 +41,12 @@ public class Main {
 				case 5:
 					System.exit(0);
 				default:
-					System.out.println("Opci�n erronea");
+					System.out.println("Opción erronea");
 				}
 			} catch (Exception e) {
-				System.out.println("La opcion tiene que ser un numero");
+				System.out.println("La opción tiene que ser un número");
 			}
 		} while (opcion != 5);
-		// Libro miLibro = new Libro("139655532-3");
-
 	}
 
 	public static String leerDatos(final String s) throws IOException {
@@ -92,7 +90,6 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
-
 
 	private static void updateLibro(){
 		Libro libro = new Libro();
