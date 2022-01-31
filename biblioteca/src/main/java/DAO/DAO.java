@@ -34,7 +34,7 @@ public class DAO implements interfaz<Libro, String> {
     }
 
     @Override
-    public Libro findById(String k) {
+    public Libro findById( String k) {
         conection();
         Libro libro = em.find(Libro.class, k);
         disconection();
@@ -47,9 +47,15 @@ public class DAO implements interfaz<Libro, String> {
     }
 
     @Override
-    public Libro update(String k) {
-        // TODO Auto-generated method stub
-        return null;
+    public void update(Libro libro) {
+        conection();
+        Libro lib = new Libro();
+        lib.setIsbn(libro.getIsbn());
+        lib.setTitulo(libro.getTitulo());
+        lib.setAutor(libro.getAutor());
+        lib.setPrecio(libro.getPrecio());
+        em.getTransaction().commit();
+        disconection();
     }
 
     @Override

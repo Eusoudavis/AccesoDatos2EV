@@ -10,7 +10,7 @@ public interface interfaz<T, K> {
 
 	List<T> read();
 
-	T update(K k);
+	void update(T t);
 
 	void delete(T t);
 

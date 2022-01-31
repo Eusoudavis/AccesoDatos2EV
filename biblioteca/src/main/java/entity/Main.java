@@ -19,9 +19,9 @@ public class Main {
 			try {
 				Scanner sc = new Scanner(System.in);
 				System.out.println("1.- Buscar un libro");
-				System.out.println("2.- Crear rexistro.");
-				System.out.println("3.- Actualizar rexistro.");
-				System.out.println("4.- Xerar Ficheiro Intecambio.");
+				System.out.println("2.- Crear libro.");
+				System.out.println("3.- Borrar libro.");
+				System.out.println("4.- Actualizar libro.");
 				System.out.println("Salir.");
 				opcion = sc.nextInt();
 
@@ -36,6 +36,7 @@ public class Main {
 					readToDelete();
 					break;
 				case 4:
+					updateLibro();
 					break;
 				case 5:
 					System.exit(0);
@@ -90,18 +91,22 @@ public class Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
 
-//		System.out.println("Titulo: ");
-//
-//
-//		System.out.println("Autor: ");
-//
-//
-//		/*System.out.println("Data: ");
-//		libro.setFecha(sc.nextLine());*/
-//
-//		System.out.println("Prezo: ");
-//
+
+	private static void updateLibro(){
+		Libro libro = new Libro();
+		try {
+			libro.setIsbn(leerDatos("ISBN: "));
+			libro.setTitulo(leerDatos("Titulo: "));
+			libro.setAutor(leerDatos("Autor: "));
+			//libro.setFecha(Date.valueOf(leerDatos("Data: ")));
+			libro.setPrecio(Integer.parseInt(leerDatos("Prezo: ")));
+			Loxica loxica = new Loxica();
+			loxica.validarUpdate(libro);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

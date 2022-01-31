@@ -1,5 +1,6 @@
 package loxica;
 
+import java.util.List;
 import java.util.Scanner;
 
 import DAO.DAO;
@@ -22,7 +23,7 @@ public class Loxica {
 
 		libro = daoLibro.findById(libro.getIsbn());
 		if ( libro != null){
-			System.out.println("SILVIA " + libro.getIsbn());
+			System.out.println("ISBN " + libro.getIsbn());
 			daoLibro.delete(libro);
 		}else {
 			System.out.println("Libro non existente.");
@@ -33,6 +34,14 @@ public class Loxica {
 		daoLibro.create(libro);
 		}else {
 			System.out.println("Libro xa existente.");
+		}
+	}
+
+	public void validarUpdate(Libro libro){
+		if (daoLibro.findById(libro.getIsbn()) != null){
+			daoLibro.update(libro);
+		}else {
+			System.out.println("Libro non existente.");
 		}
 	}
 
