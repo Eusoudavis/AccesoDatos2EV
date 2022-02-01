@@ -3,10 +3,7 @@ package DAO;
 import entity.Libro;
 import interfaz.interfaz;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 import java.util.List;
 
 public class DAO implements interfaz<Libro, String> {
@@ -43,7 +40,11 @@ public class DAO implements interfaz<Libro, String> {
 
     @Override
     public List<Libro> read() {
-        return null;
+        conection();
+        TypedQuery<Libro> consulta=em.createQuery("Select l from Libro l", Libro.class);
+        List<Libro> libros = consulta.getResultList();
+        disconection();
+        return libros;
     }
 
     @Override

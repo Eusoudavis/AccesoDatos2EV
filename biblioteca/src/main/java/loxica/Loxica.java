@@ -3,6 +3,8 @@ package loxica;
 import DAO.DAO;
 import entity.Libro;
 
+import java.util.List;
+
 public class Loxica {
 	private DAO daoLibro = new DAO();
 	
@@ -12,6 +14,10 @@ public class Loxica {
 			libro = daoLibro.findById(id);
 		}
 		return libro;
+	}
+
+	public List<Libro> validarRead(){
+		return daoLibro.read();
 	}
 
 	public void validarDelete(Libro libro){

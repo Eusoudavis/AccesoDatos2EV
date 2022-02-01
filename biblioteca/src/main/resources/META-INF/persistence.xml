@@ -4,7 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
-	<persistence-unit name="biblioteca">
+	<persistence-unit name="biblioteca" transaction-type="RESOURCE_LOCAL">
 		<class>com.tema3.biblioteca.entity.Libro</class>
 		<properties>
 			<property name="hibernate.show_sql" value="true" />
@@ -12,10 +12,10 @@
 				value="org.hibernate.dialect.MySQLDialect" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+					  value="jdbc:mysql://localhost/biblioteca" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
-			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost/biblioteca" />
 		</properties>
 	</persistence-unit>
 </persistence>
