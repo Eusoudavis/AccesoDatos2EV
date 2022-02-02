@@ -1,32 +1,32 @@
-package entity;
+import Loxica.Loxica;
 
-import loxica.Loxica;
-import loxica.LoxicaEmpregado;
-
-import javax.persistence.Persistence;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
+import Entity.Empregado;
+
 public class Main {
     static Loxica loxica = new Loxica();
-    static LoxicaEmpregado loxicaEmpregado = new LoxicaEmpregado();
     Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-//        Persistence.generateSchema("empregado", null);
+      //  Dao dao =new Dao();
+        //dao.conection();
+       // Persistence.generateSchema("empregado", null);
+
         int opcion = 0;
         do {
             try {
                 Scanner sc = new Scanner(System.in);
-                System.out.println("1.- Buscar un libro");
-                System.out.println("2.- Crear libro.");
-                System.out.println("3.- Borrar libro.");
-                System.out.println("4.- Actualizar libro.");
-                System.out.println("5.- Crear empregado.");
-                System.out.println("6.- Numero os libros.");
+                System.out.println("1.- Buscar empregado");
+                System.out.println("2.- Crear empregado.");
+                System.out.println("3.- Borrar empregado.");
+                System.out.println("4.- Actualizar empregado.");
+                System.out.println("5.- Todos os empregados.");
+                System.out.println("6.- Numero os empregados.");
                 System.out.println("Salir.");
                 opcion = sc.nextInt();
 
@@ -35,19 +35,19 @@ public class Main {
                         getCommandLineBook();
                         break;
                     case 2:
-                        crearLibro();
+                        crearEmpregado();
                         break;
                     case 3:
                         readToDelete();
                         break;
                     case 4:
-                        updateLibro();
+                        updateEmpregado();
                         break;
                     case 5:
-                        crearEmpregado();
+                        oDeLer();
                         break;
                     case 6:
-                        System.out.println(loxica.validarRead().size() + " exemplares");
+                        System.out.println(loxica.validarRead().size() + " empregados");
                         break;
                     case 7:
                         System.exit(0);
@@ -67,9 +67,9 @@ public class Main {
 
     private static void readToDelete() {
         try {
-            Libro libro = new Libro();
-            libro.setIsbn(leerDatos("ISBN"));
-            loxica.validarDelete(libro);
+            Empregado empregado = new Empregado();
+            empregado.setDni(leerDatos("DNI"));
+            loxica.validateDelete(empregado);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,34 +77,20 @@ public class Main {
 
     private static void getCommandLineBook() {
         try {
-            Libro libro = new Libro();
-            libro = loxica.findByID(leerDatos("Isbn: "));
-            System.out.println(libro.getIsbn());
-            System.out.println(libro.getAutor());
-            System.out.println(libro.getTitulo());
+            Empregado empregado = new Empregado();
+            empregado = loxica.validateFindById(leerDatos("DNI: "));
+            System.out.println(empregado.getNombre());
+            System.out.println(empregado.getOficina());
+            System.out.println(empregado.getPosto());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public static void oDeLer(){
-        List<Libro> libros = loxica.validarRead();
-        for (Libro lib: libros) {
+        List<Empregado> empregados = loxica.validarRead();
+        for (Empregado lib: empregados) {
             System.out.println(lib.toString());
-        }
-    }
-
-    private static void crearLibro() {
-        Libro libro = new Libro();
-        try {
-            libro.setIsbn(leerDatos("ISBN: "));
-            libro.setTitulo(leerDatos("Titulo: "));
-            libro.setAutor(leerDatos("Autor: "));
-            libro.setPrecio(Integer.parseInt(leerDatos("Prezo: ")));
-            Loxica loxica = new Loxica();
-            loxica.validarCreate(libro);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -117,24 +103,40 @@ public class Main {
             empregado.setOficina(Integer.parseInt(leerDatos("Oficina: ")));
             empregado.setPosto(leerDatos("Posto: "));
             //Loxica loxica = new Loxica();
-            loxicaEmpregado.validateCreate(empregado);
+            loxica.validateCreate(empregado);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void updateLibro() {
-        Libro libro = new Libro();
+    private static void updateEmpregado() {
+        Empregado empregado = new Empregado();
         try {
-            libro.setIsbn(leerDatos("ISBN: "));
-            libro.setTitulo(leerDatos("Titulo: "));
-            libro.setAutor(leerDatos("Autor: "));
-            libro.setPrecio(Integer.parseInt(leerDatos("Prezo: ")));
-            Loxica loxica = new Loxica();
-            loxica.validarUpdate(libro);
+            empregado.setDni(leerDatos("DNI: "));
+            empregado.setNombre(leerDatos("Nome: "));
+            empregado.setSueldo(Double.valueOf(leerDatos("Soldo: ")));
+            empregado.setOficina(Integer.parseInt(leerDatos("Oficina: ")));
+            empregado.setPosto(leerDatos("Posto: "));
+            //Loxica loxica = new Loxica();
+            loxica.validarUpdate(empregado);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+//    private static void updateLibro() {
+//        Libro libro = new Libro();
+//        try {
+//            libro.setIsbn(leerDatos("ISBN: "));
+//            libro.setTitulo(leerDatos("Titulo: "));
+//            libro.setAutor(leerDatos("Autor: "));
+//            libro.setPrecio(Integer.parseInt(leerDatos("Prezo: ")));
+//            Loxica loxica = new Loxica();
+//            loxica.validarUpdate(libro);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 }
+

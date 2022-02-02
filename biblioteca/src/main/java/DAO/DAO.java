@@ -1,24 +1,14 @@
 package DAO;
 
+import Connection.Connection;
 import entity.Libro;
 import interfaz.interfaz;
 
 import javax.persistence.*;
 import java.util.List;
 
-public class DAO implements interfaz<Libro, String> {
-    EntityManagerFactory emf;
-    EntityManager em;
+public class DAO extends Connection implements interfaz<Libro, String> {
 
-    private void conection() {
-        emf = Persistence.createEntityManagerFactory("biblioteca");
-        em = emf.createEntityManager();
-    }
-
-	private void disconection(){
-		em.close();
-		emf.close();
-	}
 
     @Override
     public void create(Libro libro) {
@@ -78,33 +68,4 @@ public class DAO implements interfaz<Libro, String> {
         }
 		disconection();
     }
-	
-	
-	/*
-	public void create() {
-		System.out.println("Introducir os datos do libro");
-		Libro libro = new Libro();
-		System.out.println("Introducir isbn");
-		libro.setIsbn(sc.nextLine());
-		System.out.println("Introducir titulo");
-		libro.setTitulo(sc.nextLine());
-		System.out.println("Introducir autor");
-		libro.setAutor(sc.nextLine());
-		System.out.println("Introducir data");
-		String fechaComoTexto = sc.nextLine();
-		SimpleDateFormat sdf= new SimpleDateFormat("d/M/yyyy");
-		Date fecha =null;
-		fecha = (Date) sdf.parse(fechaComoTexto);
-		libro.setFecha(fecha);
-		System.out.println("Introducir prezo");
-		libro.setPrecio(sc.nextInt());
-		
-		em.getTransaction().begin();
-		em.persist(libro);
-		em.getTransaction().commit();
-	}
-	
-	public void update() {
-	}
-	}*/
 }
