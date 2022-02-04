@@ -10,12 +10,8 @@ import Entity.Empregado;
 
 public class Main {
     static Loxica loxica = new Loxica();
-    Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-      //  Dao dao =new Dao();
-        //dao.conection();
-       // Persistence.generateSchema("empregado", null);
 
         int opcion = 0;
         do {
@@ -29,7 +25,11 @@ public class Main {
                 System.out.println("6.- Numero os empregados.");
                 System.out.println("7.- Buscar por oficina.");
                 System.out.println("8.- Buscar medias de salario por oficina.");
-                System.out.println("9.- Buscar medias de salario por oficina.");
+                System.out.println("9.- Actualizar comercial");
+                System.out.println("10.- Borrar empregado con salario negativo");
+                System.out.println("11.- Borrar empregado por oficina");
+
+
                 System.out.println("Salir.");
                 opcion = sc.nextInt();
 
@@ -62,14 +62,21 @@ public class Main {
                         loxica.validarUpdateComercial();
                         break;
                     case 10:
+                        loxica.validarDeleteNegativeSalary();
+                        break;
+                    case 11:
+                        buscarEmpregadoPorOficina();
+                        break;
+                    case 12:
                         System.exit(0);
+                        break;
                     default:
                         System.out.println("Opción erronea");
                 }
             } catch (Exception e) {
                 System.out.println("La opción tiene que ser un número");
             }
-        } while (opcion != 11);
+        } while (opcion != 13);
     }
 
     public static String leerDatos(final String s) throws IOException {
@@ -89,7 +96,7 @@ public class Main {
 
     private static void getCommandLineBook() {
         try {
-            Empregado empregado = new Empregado();
+            Empregado empregado;
             empregado = loxica.validateFindById(leerDatos("DNI: "));
             System.out.println(empregado.getNombre());
             System.out.println(empregado.getOficina());
@@ -114,9 +121,9 @@ public class Main {
     }
 
     public static void oDeLerByOfficeSalaryStatsByOffice(){
-        List<Empregado> empregados = loxica.validatesalaryStatsByOffice();
-        for (Empregado lib: empregados) {
-            System.out.println(lib.toString());
+        List<Object[]> empregados = loxica.validatesalaryStatsByOffice();
+        for (Object[] emp: empregados) {
+            System.out.println("Soldo max " + emp[0] + " Soldo minimo " + emp[1] + " soldo medio " + emp[2] + " para a oficina " + emp[3]);
         }
     }
 
@@ -128,7 +135,6 @@ public class Main {
             empregado.setSueldo(Double.valueOf(leerDatos("Soldo: ")));
             empregado.setOficina(Integer.parseInt(leerDatos("Oficina: ")));
             empregado.setPuesto(leerDatos("Posto: "));
-            //Loxica loxica = new Loxica();
             loxica.validateCreate(empregado);
         } catch (IOException e) {
             e.printStackTrace();
@@ -143,26 +149,27 @@ public class Main {
             empregado.setSueldo(Double.valueOf(leerDatos("Soldo: ")));
             empregado.setOficina(Integer.parseInt(leerDatos("Oficina: ")));
             empregado.setPuesto(leerDatos("Posto: "));
-            //Loxica loxica = new Loxica();
             loxica.validarUpdate(empregado);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-//    private static void updateLibro() {
-//        Libro libro = new Libro();
-//        try {
-//            libro.setIsbn(leerDatos("ISBN: "));
-//            libro.setTitulo(leerDatos("Titulo: "));
-//            libro.setAutor(leerDatos("Autor: "));
-//            libro.setPrecio(Integer.parseInt(leerDatos("Prezo: ")));
-//            Loxica loxica = new Loxica();
-//            loxica.validarUpdate(libro);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
+    public static void buscarEmpregadoPorOficina(){
+        try {
+            List<Integer> oficinas = loxica.validarReadAllOffice();
+            for (Integer ofi: oficinas
+            ) {
+                System.out.println("Oficina " + ofi);
+            }
+            List<Empregado> empregados = loxica.validarFindEmployeeByOffice(Integer.parseInt(leerDatos("Introduce num de oficina")));
+            for (Empregado emp: empregados
+                 ) {
+                System.out.println(emp.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

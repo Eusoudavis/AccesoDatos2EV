@@ -24,7 +24,7 @@ public class Loxica {
         return dao.findByOffice();
     }
 
-    public List<Empregado> validatesalaryStatsByOffice(){
+    public List<Object[]> validatesalaryStatsByOffice(){
         return dao.salaryStatsByOffice();
     }
 
@@ -37,8 +37,20 @@ public class Loxica {
         dao.update(empregado);
     }
 
+    public void validarDeleteNegativeSalary(){
+        dao.deleteNegativeSalary();
+    }
+
     public void validarUpdateComercial(){
         dao.updateComercial();
+    }
+
+    public List<Integer> validarReadAllOffice(){
+        return dao.readAllOffice();
+    }
+
+    public List<Empregado> validarFindEmployeeByOffice(int num){
+        return dao.findEmployeeByOffice(num);
     }
 
 

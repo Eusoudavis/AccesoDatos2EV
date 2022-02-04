@@ -56,10 +56,10 @@ public class Dao implements Interfaz<Empregado, String> {
         disconection();
         return empregados;    }
 
-    public List<Empregado> salaryStatsByOffice() {
+    public List<Object[]> salaryStatsByOffice() {
         conection();
-        TypedQuery<Empregado> consulta=em.createQuery("Select MAX(l.sueldo), MIN(l.sueldo), AVG(l.sueldo) from Empregado l group by l.oficina", Empregado.class);
-        List<Empregado> empregados = consulta.getResultList();
+        TypedQuery<Object[]> consulta=em.createQuery("Select MAX(l.sueldo), MIN(l.sueldo), AVG(l.sueldo), l.oficina from Empregado l group by l.oficina", Object[].class);
+        List<Object[]> empregados = consulta.getResultList();
         disconection();
         return empregados;    }
 
@@ -105,5 +105,36 @@ public class Dao implements Interfaz<Empregado, String> {
         }
         disconection();
     }
+
+    public void deleteNegativeSalary() {
+        conection();
+        TypedQuery<Empregado> consultaFind = em.createQuery("Select l from Empregado l where l.sueldo < 0", Empregado.class);
+        List<Empregado> empregados = consultaFind.getResultList();
+        for (Empregado empNe: empregados
+             ) {
+            EntityTransaction tx = em.getTransaction();
+            tx.begin();
+            em.remove(empNe);
+            tx.commit();
+        }
+        disconection();
+    }
+
+    public List<Integer> readAllOffice() {
+        conection();
+        TypedQuery<Integer> consulta=em.createQuery("Select l.oficina from Empregado l ", Integer.class);
+        List<Integer> empregados = consulta.getResultList();
+        disconection();
+        return empregados;    }
+
+
+    public List<Empregado> findEmployeeByOffice(int num) {
+        conection();
+        TypedQuery<Empregado> consulta=em.createQuery("Select l from Empregado l where l.oficina=?1 ", Empregado.class);
+        consulta.setParameter(1, num);
+        List<Empregado> empregados = consulta.getResultList();
+        disconection();
+        return empregados;    }
+
     }
 
