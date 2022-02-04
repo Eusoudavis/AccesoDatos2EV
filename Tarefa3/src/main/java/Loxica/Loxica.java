@@ -49,6 +49,10 @@ public class Loxica {
         return dao.readAllOffice();
     }
 
+    public List<Object[]> validarNumEmployeesByPosition(){
+        return dao.numEmployeesByPosition();
+    }
+
     public List<Empregado> validarFindEmployeeByOffice(int num){
         return dao.findEmployeeByOffice(num);
     }

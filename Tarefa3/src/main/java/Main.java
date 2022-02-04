@@ -27,7 +27,9 @@ public class Main {
                 System.out.println("8.- Buscar medias de salario por oficina.");
                 System.out.println("9.- Actualizar comercial");
                 System.out.println("10.- Borrar empregado con salario negativo");
-                System.out.println("11.- Borrar empregado por oficina");
+                System.out.println("11.- Buscar empregado por oficina");
+                System.out.println("12.- Contar empregados por oficina");
+
 
 
                 System.out.println("Salir.");
@@ -68,6 +70,9 @@ public class Main {
                         buscarEmpregadoPorOficina();
                         break;
                     case 12:
+                        contarEmpregados();
+                        break;
+                    case 13:
                         System.exit(0);
                         break;
                     default:
@@ -76,7 +81,7 @@ public class Main {
             } catch (Exception e) {
                 System.out.println("La opción tiene que ser un número");
             }
-        } while (opcion != 13);
+        } while (opcion != 14);
     }
 
     public static String leerDatos(final String s) throws IOException {
@@ -169,6 +174,14 @@ public class Main {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void contarEmpregados(){
+        List<Object[]> contados = loxica.validarNumEmployeesByPosition();
+        for (Object[] con: contados
+             ) {
+            System.out.println("Posto " +con[0] + " " + con[1]);
         }
     }
 }

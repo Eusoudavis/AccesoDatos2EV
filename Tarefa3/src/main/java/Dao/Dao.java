@@ -136,5 +136,12 @@ public class Dao implements Interfaz<Empregado, String> {
         disconection();
         return empregados;    }
 
+    public List<Object[]> numEmployeesByPosition() {
+        conection();
+        TypedQuery<Object[]> consulta=em.createNamedQuery("numEmpregados", Object[].class);
+        List<Object[]> empregados = consulta.getResultList();
+        disconection();
+        return empregados;    }
+
     }
 

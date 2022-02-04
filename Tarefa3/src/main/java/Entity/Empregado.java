@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 
 @Entity
+@NamedQuery(name="numEmpregados" ,query = "Select l.puesto, count(l.nombre) from Empregado l group by l.puesto ")
 @Table(name = "empleado")
 public class Empregado implements Serializable {
 
