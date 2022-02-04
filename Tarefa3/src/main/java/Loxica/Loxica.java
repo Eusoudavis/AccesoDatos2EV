@@ -20,12 +20,25 @@ public class Loxica {
        return empregado;
     }
 
+    public List<Empregado> validateFindByOficce(){
+        return dao.findByOffice();
+    }
+
+    public List<Empregado> validatesalaryStatsByOffice(){
+        return dao.salaryStatsByOffice();
+    }
+
+
     public List<Empregado> validarRead(){
         return dao.read();
     }
 
     public void validarUpdate(Empregado empregado){
         dao.update(empregado);
+    }
+
+    public void validarUpdateComercial(){
+        dao.updateComercial();
     }
 
 

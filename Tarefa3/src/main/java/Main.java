@@ -27,6 +27,9 @@ public class Main {
                 System.out.println("4.- Actualizar empregado.");
                 System.out.println("5.- Todos os empregados.");
                 System.out.println("6.- Numero os empregados.");
+                System.out.println("7.- Buscar por oficina.");
+                System.out.println("8.- Buscar medias de salario por oficina.");
+                System.out.println("9.- Buscar medias de salario por oficina.");
                 System.out.println("Salir.");
                 opcion = sc.nextInt();
 
@@ -50,6 +53,15 @@ public class Main {
                         System.out.println(loxica.validarRead().size() + " empregados");
                         break;
                     case 7:
+                        oDeLerByOffice();
+                        break;
+                    case 8:
+                        oDeLerByOfficeSalaryStatsByOffice();
+                        break;
+                    case 9:
+                        loxica.validarUpdateComercial();
+                        break;
+                    case 10:
                         System.exit(0);
                     default:
                         System.out.println("Opción erronea");
@@ -57,7 +69,7 @@ public class Main {
             } catch (Exception e) {
                 System.out.println("La opción tiene que ser un número");
             }
-        } while (opcion != 8);
+        } while (opcion != 11);
     }
 
     public static String leerDatos(final String s) throws IOException {
@@ -81,7 +93,7 @@ public class Main {
             empregado = loxica.validateFindById(leerDatos("DNI: "));
             System.out.println(empregado.getNombre());
             System.out.println(empregado.getOficina());
-            System.out.println(empregado.getPosto());
+            System.out.println(empregado.getPuesto());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -94,6 +106,20 @@ public class Main {
         }
     }
 
+    public static void oDeLerByOffice(){
+        List<Empregado> empregados = loxica.validateFindByOficce();
+        for (Empregado lib: empregados) {
+            System.out.println(lib.toString());
+        }
+    }
+
+    public static void oDeLerByOfficeSalaryStatsByOffice(){
+        List<Empregado> empregados = loxica.validatesalaryStatsByOffice();
+        for (Empregado lib: empregados) {
+            System.out.println(lib.toString());
+        }
+    }
+
     private static void crearEmpregado() {
         Empregado empregado = new Empregado();
         try {
@@ -101,7 +127,7 @@ public class Main {
             empregado.setNombre(leerDatos("Nome: "));
             empregado.setSueldo(Double.valueOf(leerDatos("Soldo: ")));
             empregado.setOficina(Integer.parseInt(leerDatos("Oficina: ")));
-            empregado.setPosto(leerDatos("Posto: "));
+            empregado.setPuesto(leerDatos("Posto: "));
             //Loxica loxica = new Loxica();
             loxica.validateCreate(empregado);
         } catch (IOException e) {
@@ -116,7 +142,7 @@ public class Main {
             empregado.setNombre(leerDatos("Nome: "));
             empregado.setSueldo(Double.valueOf(leerDatos("Soldo: ")));
             empregado.setOficina(Integer.parseInt(leerDatos("Oficina: ")));
-            empregado.setPosto(leerDatos("Posto: "));
+            empregado.setPuesto(leerDatos("Posto: "));
             //Loxica loxica = new Loxica();
             loxica.validarUpdate(empregado);
         } catch (IOException e) {

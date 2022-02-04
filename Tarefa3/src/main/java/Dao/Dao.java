@@ -31,6 +31,16 @@ public class Dao implements Interfaz<Empregado, String> {
         disconection();
     }
 
+    public void updateComercial() {
+        conection();
+        EntityTransaction tx = em.getTransaction();
+        tx.begin();
+        Query consulta = em.createQuery("Update Empregado l Set l.sueldo = 1500 WHERE l.puesto='comercial'");
+        consulta.executeUpdate();
+        tx.commit();
+        disconection();
+    }
+
     @Override
     public Empregado findById(String s) {
             conection();
@@ -38,6 +48,22 @@ public class Dao implements Interfaz<Empregado, String> {
             disconection();
             return empregado;
         }
+
+    public List<Empregado> findByOffice() {
+        conection();
+        TypedQuery<Empregado> consulta=em.createQuery("Select l from Empregado l where l.oficina is not (11) order by l.sueldo desc", Empregado.class);
+        List<Empregado> empregados = consulta.getResultList();
+        disconection();
+        return empregados;    }
+
+    public List<Empregado> salaryStatsByOffice() {
+        conection();
+        TypedQuery<Empregado> consulta=em.createQuery("Select MAX(l.sueldo), MIN(l.sueldo), AVG(l.sueldo) from Empregado l group by l.oficina", Empregado.class);
+        List<Empregado> empregados = consulta.getResultList();
+        disconection();
+        return empregados;    }
+
+
 
     @Override
     public List<Empregado> read() {
@@ -57,7 +83,7 @@ public class Dao implements Interfaz<Empregado, String> {
             empr.setNombre(empregado.getNombre());
             empr.setSueldo(empregado.getSueldo());
             empr.setOficina(empregado.getOficina());
-            empr.setPosto(empregado.getPosto());
+            empr.setPuesto(empregado.getPuesto());
             tx.commit();
         }else {
             System.out.println("Este empregado non existe");

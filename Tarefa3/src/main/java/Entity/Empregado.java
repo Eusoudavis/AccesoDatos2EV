@@ -1,11 +1,8 @@
 package Entity;
 
-import lombok.Data;
-
 import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
-import java.sql.Date;
 
 
 @Entity
@@ -29,7 +26,7 @@ public class Empregado implements Serializable {
     private int oficina;
     @Basic(optional = false)
     @Column(name = "puesto")
-    private String posto;
+    private String puesto;
     
 	public Empregado() {
 		super();
@@ -41,7 +38,7 @@ public class Empregado implements Serializable {
 		this.nombre = nombre;
 		this.sueldo = sueldo;
 		this.oficina = oficina;
-		this.posto = posto;
+		this.puesto = posto;
 	}
 
 	public String getDni() {
@@ -76,12 +73,12 @@ public class Empregado implements Serializable {
 		this.oficina = oficina;
 	}
 
-	public String getPosto() {
-		return posto;
+	public String getPuesto() {
+		return puesto;
 	}
 
-	public void setPosto(String posto) {
-		this.posto = posto;
+	public void setPuesto(String puesto) {
+		this.puesto = puesto;
 	}
 
 	public static long getSerialversionuid() {
@@ -91,7 +88,7 @@ public class Empregado implements Serializable {
 	@Override
 	public String toString() {
 		return "Empregado [dni=" + dni + ", nombre=" + nombre + ", sueldo=" + sueldo + ", oficina=" + oficina
-				+ ", posto=" + posto + "]";
+				+ ", posto=" + puesto + "]";
 	}
 
 	
