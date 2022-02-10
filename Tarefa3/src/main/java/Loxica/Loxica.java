@@ -45,12 +45,12 @@ public class Loxica {
         dao.updateComercial();
     }
 
-    public List<Integer> validarReadAllOffice(){
-        return dao.readAllOffice();
-    }
-
     public List<Object[]> validarNumEmployeesByPosition(){
         return dao.numEmployeesByPosition();
+    }
+
+    public List<Integer> validarReadAllOffice(){
+        return dao.readAllOffice();
     }
 
     public List<Empregado> validarFindEmployeeByOffice(int num){

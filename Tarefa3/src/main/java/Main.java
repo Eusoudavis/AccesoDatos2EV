@@ -22,16 +22,13 @@ public class Main {
                 System.out.println("3.- Borrar empregado.");
                 System.out.println("4.- Actualizar empregado.");
                 System.out.println("5.- Todos os empregados.");
-                System.out.println("6.- Numero os empregados.");
-                System.out.println("7.- Buscar por oficina.");
+                System.out.println("6.- Numero de empregados.");
+                System.out.println("7.- Buscar por empregados de oficinas distintas da 11.");
                 System.out.println("8.- Buscar medias de salario por oficina.");
                 System.out.println("9.- Actualizar comercial");
                 System.out.println("10.- Borrar empregado con salario negativo");
                 System.out.println("11.- Buscar empregado por oficina");
                 System.out.println("12.- Contar empregados por oficina");
-
-
-
                 System.out.println("Salir.");
                 opcion = sc.nextInt();
 
