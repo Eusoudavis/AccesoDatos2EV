@@ -15,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        readToDelete();
+        readById();
     }
 
     public static String leerDatos(final String s) throws IOException {

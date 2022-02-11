@@ -32,11 +32,6 @@ public class ManualDao implements Interfaz<Manual, Long> {
     }
 
     @Override
-    public void update(Manual manual) {
-
-    }
-
-    @Override
     public void delete(Manual manual) {
         conection();
         // Empregado empregadoDelete = em.find(Empregado.class, empregado.getDni());

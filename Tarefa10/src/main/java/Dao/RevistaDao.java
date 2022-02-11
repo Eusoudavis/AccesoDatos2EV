@@ -1,6 +1,5 @@
 package Dao;
 
-import Connection.Connection;
 import Entities.Revista;
 import Interfaces.Interfaz;
 
@@ -35,11 +34,6 @@ public class RevistaDao implements Interfaz<Revista, Long> {
         List<Revista> revistas = consulta.getResultList();
         disconection();
         return revistas;     }
-
-    @Override
-    public void update(Revista revista) {
-
-    }
 
     @Override
     public void delete(Revista revista) {
