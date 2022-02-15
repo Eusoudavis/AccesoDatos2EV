@@ -38,7 +38,7 @@ public class Main {
                         readToDelete();
                         break;
                     case 4:
-                        readById();
+                        readToOutroDelete();
                         break;
                     case 5:
                         System.exit(0);
@@ -88,6 +88,18 @@ public class Main {
             revista.setIsbn(Long.valueOf(leerDatos("ISBN: ")));
             loxicaRevista.validarDelete(revista);
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void readToOutroDelete() {
+        try {
+            Revista revista = new Revista();
+            revista.setIsbn(Long.valueOf(leerDatos("ISBN: ")));
+            loxicaRevista.validarOutroDelete(revista.getIsbn());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

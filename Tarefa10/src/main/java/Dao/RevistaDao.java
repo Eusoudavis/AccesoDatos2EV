@@ -1,8 +1,11 @@
 package Dao;
 
+import Entities.Manual;
 import Entities.Revista;
 import Interfaces.Interfaz;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityNotFoundException;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
@@ -48,5 +51,30 @@ public class RevistaDao implements Interfaz<Revista, Long> {
       //      System.out.println("Este empregado non existe");
      //   }
         disconection();
+    }
+
+    public void outroDelete(Long id) throws Exception {
+        conection();
+        try {
+            em = getEntityManager();
+            em.getTransaction().begin();
+            Revista revista;
+            try {
+                revista = em.getReference(Revista.class, id);
+                revista.getIsbn();
+            } catch (EntityNotFoundException enfe) {
+                throw new Exception("O manual con id " + id + " xa non existe.", enfe);
+            }
+            em.remove(revista);
+            em.getTransaction().commit();
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
+    }
+
+    private EntityManager getEntityManager() {
+        return  em;
     }
 }
