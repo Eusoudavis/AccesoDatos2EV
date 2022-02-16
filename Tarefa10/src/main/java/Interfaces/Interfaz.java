@@ -9,5 +9,5 @@ public interface Interfaz <T, K>{
 
     List<T> read();
 
-    void delete(T t);
+    void delete(T t) throws Exception;
 }

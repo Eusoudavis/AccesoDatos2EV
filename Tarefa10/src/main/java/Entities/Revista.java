@@ -20,4 +20,11 @@ public class Revista extends Manual implements Serializable {
     @Column(name = "pages")
     private int pages;
 
+    @Override
+    public String toString() {
+        return "Revista{" +
+                "date=" + date +
+                ", pages=" + pages +
+                "} " + super.toString();
+    }
 }

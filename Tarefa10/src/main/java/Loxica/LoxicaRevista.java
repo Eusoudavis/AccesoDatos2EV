@@ -18,14 +18,9 @@ public class LoxicaRevista {
         revistaDao.create(revista);
     }
 
-    public static void validarDelete(Revista revista){
-        Connection.conection();
-        Revista revista1 = em.find(Revista.class, revista.getIsbn());
-        if (revista1 != null){
-        Manual manual = new Manual();
-        manual.setIsbn(revista.getIsbn());
-        revistaDao.delete(revista1);
-        manualDao.delete(manual);
+    public static void validarDelete(Revista revista) throws Exception {
+        if (revista.getIsbn() != null){
+        revistaDao.delete(revista);
         }else {
             System.out.println("Non hai tal manual");
         }
