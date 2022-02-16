@@ -39,7 +39,4 @@ public class LoxicaRevista {
         return revista;
     }
 
-    public void validarOutroDelete(Long id) throws Exception {
-        revistaDao.outroDelete(id);
-    }
 }

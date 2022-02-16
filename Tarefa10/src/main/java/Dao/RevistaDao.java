@@ -42,7 +42,6 @@ public class RevistaDao implements Interfaz<Revista, Long> {
     public void delete(Revista revista) throws Exception {
         conection();
         try {
-            em = getEntityManager();
             em.getTransaction().begin();
             try {
                 revista = em.getReference(Revista.class, revista.getIsbn());
@@ -57,30 +56,5 @@ public class RevistaDao implements Interfaz<Revista, Long> {
                 em.close();
             }
         }
-    }
-
-    public void outroDelete(Long id) throws Exception {
-        conection();
-        try {
-            em = getEntityManager();
-            em.getTransaction().begin();
-            Revista revista;
-            try {
-                revista = em.getReference(Revista.class, id);
-                revista.getIsbn();
-            } catch (EntityNotFoundException enfe) {
-                throw new Exception("O manual con id " + id + " xa non existe.", enfe);
-            }
-            em.remove(revista);
-            em.getTransaction().commit();
-        } finally {
-            if (em != null) {
-                em.close();
-            }
-        }
-    }
-
-    private EntityManager getEntityManager() {
-        return  em;
     }
 }
