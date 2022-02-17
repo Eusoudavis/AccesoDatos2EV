@@ -1,31 +1,0 @@
-
-S	java:S106"9Replace this use of System.out or System.err by a logger.(² ¦Œşÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(­üŸûÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ÎşİÁüÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ş–ü¡şÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ñØù»ÿÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(¾™•±
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Ã¸ş»úÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(šÙµÌÿÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(‘Éşüÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(Âû 
-S	java:S106"9Replace this use of System.out or System.err by a logger.(«İÎùÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(âì¿¼
-N	java:S106 "9Replace this use of System.out or System.err by a logger.( úù„
-N	java:S1064"9Replace this use of System.out or System.err by a logger.(À«Â»
-S	java:S106L"9Replace this use of System.out or System.err by a logger.(—ü€Íûÿÿÿÿ
-S	java:S106O"9Replace this use of System.out or System.err by a logger.(íàııÿÿÿÿ
-S	java:S106U"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ
-S	java:S106g"9Replace this use of System.out or System.err by a logger.(ô±íøùÿÿÿÿ
-N	java:S106h"9Replace this use of System.out or System.err by a logger.(öªÓê
-S	java:S106i"9Replace this use of System.out or System.err by a logger.(­æ„Éûÿÿÿÿ
-S	java:S106r"9Replace this use of System.out or System.err by a logger.(Í˜½‡øÿÿÿÿ
-S	java:S106y"9Replace this use of System.out or System.err by a logger.(Í˜½‡øÿÿÿÿ
-O	java:S106€"9Replace this use of System.out or System.err by a logger.(Ó«ßá
-T	java:S106¥"9Replace this use of System.out or System.err by a logger.(æúåúÿÿÿÿ
-T	java:S106ª"9Replace this use of System.out or System.err by a logger.(‰íõ„øÿÿÿÿ
-T	java:S106µ"9Replace this use of System.out or System.err by a logger.(ê˜ñêÿÿÿÿÿ
-\
-java:S1192f"FDefine a constant instead of duplicating this literal "DNI: " 3 times.(¡‘¥
-0
-java:S1220""Move this file to a named package.

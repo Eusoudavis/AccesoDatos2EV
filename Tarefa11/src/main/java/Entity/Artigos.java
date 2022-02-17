@@ -1,3 +1,5 @@
+package Entity;
+
 import lombok.Data;
 
 import javax.persistence.Column;

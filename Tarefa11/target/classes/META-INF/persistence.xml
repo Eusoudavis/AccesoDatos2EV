@@ -5,8 +5,8 @@
 			 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 
 	<persistence-unit name="xornalista" transaction-type="RESOURCE_LOCAL">
-		<class>Manual</class>
-		<class>Revista</class>
+		<class>Artigos</class>
+		<class>Xornalista</class>
 		<properties>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.dialect"
@@ -18,9 +18,9 @@
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
 
-			<property
-					name="javax.persistence.schema-generation.database.action"
-					value="drop-and-create"/>
+<!--			<property-->
+<!--					name="javax.persistence.schema-generation.database.action"-->
+<!--					value="drop-and-create"/>-->
 		</properties>
 	</persistence-unit>
 </persistence>

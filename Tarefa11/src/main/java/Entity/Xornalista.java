@@ -1,3 +1,5 @@
+package Entity;
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,12 +10,12 @@ import java.util.List;
 @Entity
 @Data
 public class Xornalista implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -1755544336644215492L;
+
     @Id
     @Column(name = "dni", nullable = false)
     private String dni;
-
-    @Serial
-    private static final long serialVersionUID = -1755544336644215492L;
 
     @Column(name = "name")
     private String name;
