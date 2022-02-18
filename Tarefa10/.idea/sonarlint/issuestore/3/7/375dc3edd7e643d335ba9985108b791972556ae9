@@ -1,8 +1,0 @@
-
-V
-java:S1118":Add a private constructor to hide the implicit public one.(óõØs8›ùæþí/
-j
-java:S1104	"NMake em a static final constant or non-public and provide accessors if needed.(´ÿû#8úæêþí/
-D
-java:S1444	"(Make this "public static em" field final(´ÿû#8üæêþí/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•³É„ûÿÿÿÿ

@@ -2,16 +2,14 @@ package Entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
 @Data
 public class Artigos implements Serializable {
+
     @Id
     @Column(name = "isbn", nullable = false)
     private Long isbn;
@@ -29,6 +27,7 @@ public class Artigos implements Serializable {
     private int word;
 
     @ManyToOne
+    @JoinColumn(name = "dni", nullable = false)
     Xornalista xornalista;
 
 }

@@ -23,7 +23,7 @@ public class Xornalista implements Serializable {
     @Column(name = "telf")
     private int telf;
 
-    @OneToMany (mappedBy = "xornalista")
+    @OneToMany (mappedBy = "xornalista", orphanRemoval = true)
     List<Artigos> artigos;
 
 }

@@ -4,28 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6fa83c1-25d3-45ea-b64f-aef9b4ee24dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/ArtigoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/3/9/390c2c6bd0a5ffc53c59c0e71c9da71c8ac6286b" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/3/9/390c2c6bd0a5ffc53c59c0e71c9da71c8ac6286b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/8/c/8cb9ec965185c16d5b9542de4df6d12addd8a4f8" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/8/c/8cb9ec965185c16d5b9542de4df6d12addd8a4f8" afterDir="false" />
+    <list default="true" id="f6fa83c1-25d3-45ea-b64f-aef9b4ee24dd" name="Changes" comment="Create DAOs and Menu into Main class">
+      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/3/7/375dc3edd7e643d335ba9985108b791972556ae9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/3/9/390c2c6bd0a5ffc53c59c0e71c9da71c8ac6286b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/8/c/8cb9ec965185c16d5b9542de4df6d12addd8a4f8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tarefa11.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Artigos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Artigos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Artigos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Artigos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Xornalista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Xornalista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Xornalista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Xornalista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/4/c/4c982e198ff18659cbdef8ab6192b2da7bdaf65c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/a/0/a066660526515371f9d642dd8052c7278490d433" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/b/3/b3d5dc21bc25a9ea3b02bb0a5281fd0ae25dce49" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/f/5/f53c55be04a43a5e47d98c1f3060ae24c9ba77ca" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +56,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
@@ -105,6 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1645085967679</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create DAOs and Menu into Main class">
+      <created>1645094240935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645094240935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -119,67 +116,71 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create DAOs and Menu into Main class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create DAOs and Menu into Main class" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>71</line>
+          <line>68</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>72</line>
+          <line>79</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>73</line>
+          <line>80</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>74</line>
+          <line>82</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>69</line>
+          <line>77</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>70</line>
+          <line>78</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
-          <line>10</line>
+          <line>14</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
-          <line>11</line>
+          <line>15</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
-          <line>12</line>
+          <line>16</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
-          <line>13</line>
+          <line>17</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
-          <line>14</line>
+          <line>18</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
-          <line>15</line>
+          <line>19</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -211,6 +212,31 @@
           <url>file://$PROJECT_DIR$/src/main/java/DAO/ArtigoDAO.java</url>
           <line>11</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAO/XornalistaDAO.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
