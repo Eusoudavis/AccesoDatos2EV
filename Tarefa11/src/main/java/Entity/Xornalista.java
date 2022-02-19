@@ -26,4 +26,12 @@ public class Xornalista implements Serializable {
     @OneToMany (mappedBy = "xornalista", orphanRemoval = true)
     List<Artigos> artigos;
 
+    @Override
+    public String toString() {
+        return "Xornalista{" +
+                "dni='" + dni + '\'' +
+                ", name='" + name + '\'' +
+                ", telf=" + telf +
+                '}';
+    }
 }

@@ -6,12 +6,14 @@ import Entity.Xornalista;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     static XornalistaDAO xornalistaDAO = new XornalistaDAO();
     static ArtigoDAO artigoDAO = new ArtigoDAO();
+
     public static void main(String[] args) throws IOException {
 
         int opcion = 0;
@@ -23,7 +25,7 @@ public class Main {
                 System.out.println("3.- Novo artigo.");
                 System.out.println("4.- Amosar artigos dun xornalista.");
                 System.out.println("5.- Amosar artigos dun ano.");
-                System.out.println("Salir.");
+                System.out.println("6,- Salir.");
                 opcion = sc.nextInt();
 
                 switch (opcion) {
@@ -37,12 +39,12 @@ public class Main {
                         setArtigo();
                         break;
                     case 4:
-                      //  updateEmpregado();
+                        readByDniList();
                         break;
                     case 5:
-                       // oDeLer();
+                        readByyear();
                         break;
-                    case 13:
+                    case 6:
                         System.exit(0);
                         break;
                     default:
@@ -63,30 +65,52 @@ public class Main {
         xornalistaDAO.create(xornalista);
     }
 
-    public static void setArtigo(){
+    public static void setArtigo() {
         try {
-            //Buscar xornalista:
             Xornalista xornalista = readByDni();
             System.out.println(xornalista.toString());
-            System.out.println("Desexa engadir un artigo para este xornalista?");
             Scanner scanner = new Scanner(System.in);
-            String opcion = scanner.next().toUpperCase(Locale.ROOT);
-            while (opcion.equals("SI")){
-            Artigos artigos = new Artigos();
-                artigos.setIsbn(Long.valueOf(leerDatos("ISBN ")));
-                artigos.setTitle(leerDatos("Titalo: "));
-                artigos.setYear(Integer.parseInt(leerDatos("Ano: ")));
-                artigos.setWord(Integer.parseInt(leerDatos("Numero de palabras: ")));
-                xornalista.setDni(leerDatos("DNI "));
-                artigos.setXornalista(xornalista);
-                xornalista.getArtigos().add(new Artigos());
-                artigoDAO.create(artigos);}
+            String opcion;
+            do {
+                System.out.println("Desexa engadir un artigo para este xornalista? [SI/NON]");
+                opcion = scanner.next().toUpperCase(Locale.ROOT);
+                if (opcion.equals("SI")) {
+                    Artigos artigos = new Artigos();
+                    artigos.setIsbn(Long.valueOf(leerDatos("ISBN ")));
+                    artigos.setTitle(leerDatos("Titalo: "));
+                    artigos.setYear(Integer.parseInt(leerDatos("Ano: ")));
+                    artigos.setWord(Integer.parseInt(leerDatos("Numero de palabras: ")));
+                    artigos.setXornalista(xornalista);
+                    artigoDAO.create(artigos);
+                }
+            } while (!opcion.equals("NON"));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void readToDelete(){
+    public static Xornalista readByDni() throws IOException {
+        Xornalista xornalista = xornalistaDAO.findById(leerDatos("DNI do xornalista"));
+        return xornalista;
+    }
+
+    public static void readByDniList() throws IOException {
+        List<Artigos> artigos = artigoDAO.readArtigo(leerDatos("DNI "));
+        for (Artigos artigo: artigos
+             ) {
+            System.out.println(artigo.getTitle());
+        }
+    }
+
+    public static void readByyear() throws IOException {
+        List<Artigos> artigos = artigoDAO.readArtigoByYear(Integer.parseInt(leerDatos("ANO ")));
+        for (Artigos artigo: artigos
+        ) {
+            System.out.println(artigo.getTitle());
+        }
+    }
+
+    public static void readToDelete() {
         try {
             Xornalista xornalista = new Xornalista();
             xornalista.setDni(leerDatos("DNI XORNALISTA "));
@@ -96,12 +120,6 @@ public class Main {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-    
-    public static Xornalista readByDni() throws IOException {
-      //  Xornalista xornalista;
-        return xornalistaDAO.findById(leerDatos("DNI do xornalista"));
-
     }
 
     public static String leerDatos(final String s) throws IOException {

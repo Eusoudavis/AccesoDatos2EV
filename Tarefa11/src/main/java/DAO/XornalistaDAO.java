@@ -40,7 +40,7 @@ public class XornalistaDAO {
             try {
                 xornalista = em.getReference(Xornalista.class, xornalista.getDni());
             } catch (EntityNotFoundException enfe) {
-                throw new Exception("O manual con id " + xornalista.getDni() + " xa non existe.", enfe);
+                throw new Exception("O xornalista co dni " + xornalista.getDni() + " xa non existe.", enfe);
             }
             em.remove(xornalista);
             em.getTransaction().commit();

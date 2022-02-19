@@ -30,4 +30,14 @@ public class Artigos implements Serializable {
     @JoinColumn(name = "dni", nullable = false)
     Xornalista xornalista;
 
+
+    @Override
+    public String toString() {
+        return "Artigos{" +
+                "isbn=" + isbn +
+                ", title='" + title + '\'' +
+                ", year=" + year +
+                ", word=" + word +
+                '}';
+    }
 }
