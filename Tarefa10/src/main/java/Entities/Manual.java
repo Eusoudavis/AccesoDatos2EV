@@ -32,4 +32,5 @@ public class Manual implements Serializable {
     @Column(name = "price")
     private int price;
 
+
 }

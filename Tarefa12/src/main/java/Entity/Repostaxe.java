@@ -11,15 +11,23 @@ import java.util.Date;
 @Data
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Repostaxe implements Serializable {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
-
     @Serial
     private static final long serialVersionUID = -794818740698281161L;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
+    private Long id;
     @Column(name = "data", nullable = false)
-    private Date data;
+    private String data;
     @Column(name = "importe", nullable = false)
-    private Double importe;
+    private double importe;
+
+    @Override
+    public String toString() {
+        return "Repostaxe{" +
+                "id=" + id +
+                ", data='" + data + '\'' +
+                ", importe=" + importe +
+                '}';
+    }
 }
