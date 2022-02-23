@@ -16,11 +16,16 @@ public class Factura extends Repostaxe implements Serializable {
     private static final long serialVersionUID = 1670760995474407439L;
 
     @ManyToOne
-    @JoinColumn(name = "dni", nullable = false)
+    @JoinColumn(name = "dni",  nullable = false)
     Persoa persoa;
 
     @Override
     public String toString() {
         return "Factura{" + super.toString();
+    }
+    public String toStringConPersoa() {
+        return "Factura{" +
+                "persoa=" + persoa +
+                "} " + super.toString();
     }
 }

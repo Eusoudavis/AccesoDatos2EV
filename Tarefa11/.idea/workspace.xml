@@ -5,32 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6fa83c1-25d3-45ea-b64f-aef9b4ee24dd" name="Changes" comment="Create DAOs and Menu into Main class">
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Connection/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/EnchidoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/FacturaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/PersoaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/RepostaxeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/TipoCombustibleDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Persoa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/TipoCombustible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/resources/log4j2-test.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Tarefa12/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/2/d/2d26580e4d51daa9adab6c3b4fc3e3b3269ff680" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa10/src/main/java/Entities/Manual.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/src/main/java/Entities/Manual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Enchido.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Enchido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/EnchidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/EnchidoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/PersoaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/PersoaDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Repostaxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Repostaxe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Persoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Persoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

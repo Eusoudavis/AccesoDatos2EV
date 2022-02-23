@@ -12,6 +12,7 @@ import java.util.List;
 
 @Entity
 @Data
+
 public class Persoa implements Serializable {
     @Serial
     private static final long serialVersionUID = -8636384700031003648L;
@@ -25,4 +26,12 @@ public class Persoa implements Serializable {
 
     @OneToMany(mappedBy = "persoa", orphanRemoval = true)
     List<Factura> facturas;
+
+    @Override
+    public String toString() {
+        return "Persoa{" +
+                "dni='" + dni + '\'' +
+                ", matricula='" + matricula + '\'' +
+                '}';
+    }
 }
