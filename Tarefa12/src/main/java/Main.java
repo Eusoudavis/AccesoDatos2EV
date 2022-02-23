@@ -7,12 +7,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-
-import static Connection.Connection.conection;
 
 @Log4j2
 public class Main {
@@ -23,17 +20,17 @@ public class Main {
     static FacturaDAO facturaDAO = new FacturaDAO();
     static PersoaDAO persoaDAO = new PersoaDAO();
     static String opcion = null;
-    static String dniPersoa[] = {"1234", "1221", "4321"};
-    static String matricula[]= {"0000smg","2222dgc","0202mgm"};
-    static Long idTipoCombustible[] = {Long.valueOf('1'), Long.valueOf('2'), Long.valueOf('3')};
-    static String tipoCombustibleNome[] = {"Diesel", "Gasolina", "Diesel Agricola"};
-    static Persoa persoa= new Persoa();
-    static TipoCombustible tipoCombustible= new TipoCombustible();
+    static String[] dniPersoa = {"1234", "1221", "4321"};
+    static String[] matricula = {"0000smg", "2222dgc", "0202mgm"};
+    static Long[] idTipoCombustible = {1L, 2L, 3L};
+    static String[] tipoCombustibleNome = {"Diesel", "Gasolina", "Diesel Agricola"};
+    static Persoa persoa = new Persoa();
+    static TipoCombustible tipoCombustible = new TipoCombustible();
 
     public static void main(String[] args) {
-      // conection();
-        createPersoas();
-        createTipoCombustible();
+        //conection();
+        //createPersoas();
+        //createTipoCombustible();
 
         int opcion = 0;
         do {
@@ -144,13 +141,13 @@ public class Main {
         }
     }
 
-    public static void totalVendas(){
+    public static void totalVendas() {
         log.info("-----------------------TOTAL VENDAS----------------------------");
         double vendaUd = 0;
         List<Repostaxe> repostaxes = repostaxeDAO.read();
         for (Repostaxe repostaxe : repostaxes
         ) {
-           vendaUd = vendaUd + repostaxe.getImporte();
+            vendaUd = vendaUd + repostaxe.getImporte();
         }
         log.info("-------------------TOTAL VENDAS " + vendaUd + " €----------------------- ");
     }
@@ -165,10 +162,10 @@ public class Main {
         }
     }
 
-    public static void createPersoas(){
-        for (int i = 0; i < dniPersoa.length; i++){
-            for (int j = 0; j < matricula.length; j++){
-                if (i==j){
+    public static void createPersoas() {
+        for (int i = 0; i < dniPersoa.length; i++) {
+            for (int j = 0; j < matricula.length; j++) {
+                if (i == j) {
                     persoa.setDni(dniPersoa[i]);
                     persoa.setMatricula(matricula[j]);
                     persoaDAO.create(persoa);
@@ -179,9 +176,9 @@ public class Main {
 
 
     private static void createTipoCombustible() {
-        for (int i = 0; i < idTipoCombustible.length; i++){
-            for (int j = 0; j < tipoCombustibleNome.length; j++){
-                if (i==j){
+        for (int i = 0; i < idTipoCombustible.length; i++) {
+            for (int j = 0; j < tipoCombustibleNome.length; j++) {
+                if (i == j) {
                     tipoCombustible.setIdCombustible(idTipoCombustible[i]);
                     tipoCombustible.setFuel(tipoCombustibleNome[j]);
                     tipoCombustibleDAO.create(tipoCombustible);

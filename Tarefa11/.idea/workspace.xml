@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f6fa83c1-25d3-45ea-b64f-aef9b4ee24dd" name="Changes" comment="Create DAOs and Menu into Main class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/EnchidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/EnchidoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/PersoaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/DAO/PersoaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Factura.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Factura.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Persoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Entity/Persoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Tarefa12/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
