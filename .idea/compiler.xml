@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Tarefa12" />
+        <module name="Tarefa13" />
         <module name="Tarefa10" />
         <module name="Tarefa11" />
-        <module name="Tarefa12" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Tarefa10" target="17" />
       <module name="Tarefa11" target="17" />
       <module name="Tarefa12" target="17" />
+      <module name="Tarefa13" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
