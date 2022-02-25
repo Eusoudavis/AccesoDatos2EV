@@ -5,7 +5,6 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 //De cada taxista: nome, DNI, data de nacemento
@@ -16,6 +15,9 @@ import java.util.List;
 public class TaxiDriver implements Serializable {
     @Serial
     private static final long serialVersionUID = 3469854856962154676L;
+    @ManyToMany
+    @JoinColumn(name = "carRegistrationNumber")
+    List<Taxi> taxis;
     @Id
     @Column(name = "dni", nullable = false)
     private String dni;
@@ -25,7 +27,4 @@ public class TaxiDriver implements Serializable {
     private String birthdate;
     @Column(name = "active", nullable = false)
     private Boolean active;
-    @ManyToMany
-    @JoinColumn(name = "carRegistrationNumber")
-    List<Taxi> taxis;
 }

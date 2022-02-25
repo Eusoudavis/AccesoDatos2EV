@@ -19,21 +19,16 @@ import java.util.List;
 public class Taxi implements Serializable {
     @Serial
     private static final long serialVersionUID = -2547379875876116317L;
-
+    @ManyToMany(mappedBy = "taxis")
+    List<TaxiDriver> taxiDrivers;
     @Id
     @Column(name = "carRegistrationNumber", nullable = false)
     private String carRegistrationNumber;
-
     @Column(name = "value", nullable = false)
     private int value;
-
     @Column(name = "nSeats", nullable = false)
     private int nSeats;
-
     @Column(name = "available", nullable = false)
     private Boolean available;
-
-    @ManyToMany(mappedBy = "taxis")
-    List<TaxiDriver> taxiDrivers;
 
 }

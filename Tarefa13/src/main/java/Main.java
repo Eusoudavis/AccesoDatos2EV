@@ -1,5 +1,7 @@
 import Connection.Connection;
 import Entities.Taxi;
+import Entities.TaxiDriver;
+import Loxica.TaxiDriverLoxica;
 import Loxica.TaxiLoxica;
 import com.github.javafaker.Faker;
 import lombok.extern.log4j.Log4j2;
@@ -12,6 +14,7 @@ import java.io.InputStreamReader;
 public class Main {
     static Faker faker = new Faker();
     static TaxiLoxica taxiLoxica = new TaxiLoxica();
+    static TaxiDriverLoxica taxiDriverLoxica = new TaxiDriverLoxica();
     public static void main(String[] args) {
        // Connection.conection();
         int opcion = 0;
@@ -27,7 +30,7 @@ public class Main {
                 log.info("7- Amosar taxista fora de servixo");
                 log.info("8- Sair");
                 switch (opcion = Integer.parseInt(leerDatos("OPCIÓN A ELIXIR"))) {
-                    case 1 -> setTaxi();
+                    case 1 -> setTaxiDriver();
                     case 2 -> setTaxi();
                     case 3 -> setTaxi();
                     case 4 -> setTaxi();
@@ -58,5 +61,15 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void setTaxiDriver(){
+            TaxiDriver taxiDriver = new TaxiDriver();
+            taxiDriver.setDni(faker.idNumber().valid());
+            taxiDriver.setBirthdate(faker.date().birthday().toString());
+            taxiDriver.setName(faker.funnyName().name());
+            taxiDriver.setActive(false);
+            taxiDriverLoxica.validateCreateTaxiDriver(taxiDriver);
+            log.info("CREADO CORRECTAMENTE O TAXISTA " + taxiDriver.toString());
     }
 }
