@@ -1,10 +1,10 @@
 package Loxica;
 
-import Dao.TaxiDriveDao;
+import Dao.TaxiDriverDao;
 import Entities.TaxiDriver;
 
 public class TaxiDriverLoxica {
-    TaxiDriveDao taxiDriveDao = new TaxiDriveDao();
+    TaxiDriverDao taxiDriveDao = new TaxiDriverDao();
 
     public void validateCreateTaxiDriver(TaxiDriver taxiDriver){
         taxiDriveDao.create(taxiDriver);

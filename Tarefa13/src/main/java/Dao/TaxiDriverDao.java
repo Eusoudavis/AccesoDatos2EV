@@ -6,9 +6,12 @@ import Entities.TaxiDriver;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static Connection.Connection.*;
 
-public class TaxiDriveDao {
+public class TaxiDriverDao {
     public void create(TaxiDriver taxiDriver) {
         conection();
         EntityTransaction tx = em.getTransaction();
@@ -18,13 +21,22 @@ public class TaxiDriveDao {
         disconection();
     }
 
+    public TaxiDriver findById(String dni) {
+        conection();
+        TaxiDriver taxiDriver = em.find(TaxiDriver.class, dni);
+        disconection();
+        return taxiDriver;
+    }
     public void updateTaxiDriver(String dni) {
+        TaxiDriver taxiDriver = findById(dni);
         conection();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
-        Query consulta = em.createQuery("Update TaxiDriver t Set t.active = true WHERE l.dni=?1");
-        consulta.setParameter(1, dni);
-        consulta.executeUpdate();
+        List<Taxi> taxis = new ArrayList<>();
+        Taxi taxi = new Taxi();
+        taxi.setCarRegistrationNumber("1234fff");
+        taxis.add(taxi);
+        taxiDriver.setTaxis(taxis);
         tx.commit();
         disconection();
     }

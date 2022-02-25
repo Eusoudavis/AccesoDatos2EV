@@ -15,9 +15,11 @@ import java.util.List;
 public class TaxiDriver implements Serializable {
     @Serial
     private static final long serialVersionUID = 3469854856962154676L;
+
     @ManyToMany
     @JoinColumn(name = "carRegistrationNumber")
     List<Taxi> taxis;
+
     @Id
     @Column(name = "dni", nullable = false)
     private String dni;

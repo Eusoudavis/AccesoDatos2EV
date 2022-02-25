@@ -9,6 +9,8 @@ import lombok.extern.log4j.Log4j2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 @Log4j2
 public class Main {
@@ -69,6 +71,7 @@ public class Main {
             taxiDriver.setBirthdate(faker.date().birthday().toString());
             taxiDriver.setName(faker.funnyName().name());
             taxiDriver.setActive(false);
+
             taxiDriverLoxica.validateCreateTaxiDriver(taxiDriver);
             log.info("CREADO CORRECTAMENTE O TAXISTA " + taxiDriver.toString());
     }
