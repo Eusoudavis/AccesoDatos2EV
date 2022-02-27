@@ -29,4 +29,14 @@ public class TaxiDriver implements Serializable {
     private String birthdate;
     @Column(name = "active", nullable = false)
     private Boolean active;
+
+    @Override
+    public String toString() {
+        return "TaxiDriver{" +
+                "dni='" + dni + '\'' +
+                ", name='" + name + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", active=" + active +
+                '}';
+    }
 }

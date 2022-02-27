@@ -1,13 +1,8 @@
 package Dao;
 
-import Entities.Taxi;
 import Entities.TaxiDriver;
 
 import javax.persistence.EntityTransaction;
-import javax.persistence.Query;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static Connection.Connection.*;
 
@@ -27,17 +22,18 @@ public class TaxiDriverDao {
         disconection();
         return taxiDriver;
     }
-    public void updateTaxiDriver(String dni) {
-        TaxiDriver taxiDriver = findById(dni);
+
+    public void updateTaxiDriver(TaxiDriver taxiDriver) {
+        TaxiDriver taxiDriverDB = findById(taxiDriver.getDni());
         conection();
         EntityTransaction tx = em.getTransaction();
         tx.begin();
-        List<Taxi> taxis = new ArrayList<>();
-        Taxi taxi = new Taxi();
-        taxi.setCarRegistrationNumber("1234fff");
-        taxis.add(taxi);
-        taxiDriver.setTaxis(taxis);
+        if (!taxiDriverDB.equals(taxiDriver)) {
+            taxiDriverDB.setActive(taxiDriver.getActive());
+           // taxiDriverDB.setTaxis(taxiDriver.getTaxis());
+        }
         tx.commit();
         disconection();
     }
+
 }

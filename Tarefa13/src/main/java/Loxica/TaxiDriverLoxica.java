@@ -1,6 +1,7 @@
 package Loxica;
 
 import Dao.TaxiDriverDao;
+import Entities.Taxi;
 import Entities.TaxiDriver;
 
 public class TaxiDriverLoxica {
@@ -9,4 +10,14 @@ public class TaxiDriverLoxica {
     public void validateCreateTaxiDriver(TaxiDriver taxiDriver){
         taxiDriveDao.create(taxiDriver);
     }
+
+    public TaxiDriver validateFindByDNI(String dni){
+        return taxiDriveDao.findById(dni);
+    }
+
+    public void validateUpdateTaxiDriver(TaxiDriver taxiDriver){
+        taxiDriveDao.updateTaxiDriver(taxiDriver);
+    }
+
+
 }

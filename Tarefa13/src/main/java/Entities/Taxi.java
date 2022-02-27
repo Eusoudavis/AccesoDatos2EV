@@ -31,4 +31,13 @@ public class Taxi implements Serializable {
     @Column(name = "available", nullable = false)
     private Boolean available;
 
+    @Override
+    public String toString() {
+        return "Taxi{" +
+                "carRegistrationNumber='" + carRegistrationNumber + '\'' +
+                ", value=" + value +
+                ", nSeats=" + nSeats +
+                ", available=" + available +
+                '}';
+    }
 }

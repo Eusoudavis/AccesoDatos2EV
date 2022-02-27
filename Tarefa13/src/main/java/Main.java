@@ -18,12 +18,12 @@ public class Main {
     static TaxiLoxica taxiLoxica = new TaxiLoxica();
     static TaxiDriverLoxica taxiDriverLoxica = new TaxiDriverLoxica();
     public static void main(String[] args) {
-       // Connection.conection();
+        //Connection.conection();
         int opcion = 0;
         do {
             try{
                 log.info("---------MENU-------------");
-                log.info("1- Engadir Taxi");
+                log.info("1- Engadir Taxista");
                 log.info("2- Engadir Taxi");
                 log.info("3- Comezo xornada taxista");
                 log.info("4- Fin xornada taxista");
@@ -34,7 +34,7 @@ public class Main {
                 switch (opcion = Integer.parseInt(leerDatos("OPCIÓN A ELIXIR"))) {
                     case 1 -> setTaxiDriver();
                     case 2 -> setTaxi();
-                    case 3 -> setTaxi();
+                    case 3 -> initJourney();
                     case 4 -> setTaxi();
                     case 5 -> setTaxi();
                     case 6 -> setTaxi();
@@ -74,5 +74,20 @@ public class Main {
 
             taxiDriverLoxica.validateCreateTaxiDriver(taxiDriver);
             log.info("CREADO CORRECTAMENTE O TAXISTA " + taxiDriver.toString());
+    }
+
+    public static void initJourney(){
+        try {
+            Taxi taxi = taxiLoxica.validateFindByCarNumber(leerDatos("Matricula "));
+            taxiLoxica.validateUpdate(taxi.getCarRegistrationNumber());
+            TaxiDriver taxiDriver = taxiDriverLoxica.validateFindByDNI(leerDatos("DNI "));
+            List<Taxi> taxis = new ArrayList<>();
+            taxis.add(taxi);
+            taxiDriver.setTaxis(taxis);
+            taxiDriver.setActive(true);
+            taxiDriverLoxica.validateUpdateTaxiDriver(taxiDriver);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

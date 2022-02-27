@@ -13,6 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ParadaDeTaxis" target="17" />
       <module name="Tarefa10" target="17" />
       <module name="Tarefa11" target="17" />
       <module name="Tarefa12" target="17" />
