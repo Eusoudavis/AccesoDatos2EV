@@ -18,6 +18,7 @@
       <module name="Tarefa11" target="17" />
       <module name="Tarefa12" target="17" />
       <module name="Tarefa13" target="17" />
+      <module name="Tarefa14" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
