@@ -1,4 +1,3 @@
-import Connection.Connection;
 import Dao.AlumnoDao;
 import Dao.OrdenadorDao;
 import Entities.Alumno;
@@ -9,6 +8,7 @@ import lombok.extern.log4j.Log4j2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 
 import static Connection.Connection.conection;
 
@@ -32,12 +32,12 @@ public class Main {
                     log.info("7- Sair");
                     switch (opcion = Integer.parseInt(leerDatos("OPCIÓN A ELIXIR"))) {
                         case 1 -> setAlumno();
-                        case 2 -> lerPC();
+                        case 2 -> deleteAlumno();
                         case 3 -> setPC();
-                        case 4 -> lerAlumno();
-//                        case 5 -> lerParaCrer();
+                        case 4 -> buscarOrdenadorPorAlumno();
+                        case 5 -> buscarAlumnoPorOrdenador();
                         case 6 -> readAlumnos();
-                        case 7 -> readAlumnosSinPC();
+                        case 7 -> System.exit(0);
                         default -> log.info("OPCIÓN ERRÓNEA");
                     }
                 } catch (IOException e) {
@@ -50,38 +50,35 @@ public class Main {
         System.out.println(s);
         return (new BufferedReader(new InputStreamReader(System.in))).readLine();
     }
+
+
     public static void setAlumno(){
         try {
             Alumno alumno = new Alumno();
             alumno.setIdAlumno(faker.idNumber().valid());
             alumno.setNome(faker.name().fullName());
             alumno.setTelefono(Integer.parseInt(faker.number().digits(9)));
-//            Ordenador ordenador = ordenadorDao.findById(leerDatos("ID DE ORDENADOR "));
-//            alumno.setOrdenador(ordenador);
+            Ordenador ordenador = readPCsinAlumnos();
+            ordenador.setAlumno(alumno);
+            alumno.setOrdenador(ordenador);
             alumnoDao.create(alumno);
+            ordenadorDao.updatePC(ordenador);
+            log.info("------------------------CREADO O ALUMNO  "+ alumno.getNome()+ "---------------------------");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static void lerPC(){
-        log.info(ordenadorDao.findById("id "));
-    }
-    public static void lerAlumno(){
-        log.info(alumnoDao.findById("id "));
     }
 
     public static void setPC(){
         try {
             Ordenador ordenador = new Ordenador();
             ordenador.setIdPC(faker.idNumber().valid());
-            ordenador.setMarcar(faker.chuckNorris().fact().toString());
+            ordenador.setMarca(faker.chuckNorris().fact().toString());
             ordenador.setModelo(faker.number().digits(3));
-            Alumno alumno = new Alumno();
-            alumno.setIdAlumno(leerDatos("id alumno"));
-            ordenador.setAlumno(alumno);
             ordenadorDao.create(ordenador);
-        } catch (IOException e) {
+            log.info("------------------------CREADO O PC MODELO "+ ordenador.getModelo()+ "---------------------------");
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -89,7 +86,40 @@ public class Main {
     public static void readAlumnos(){
         alumnoDao.read().forEach((Alumno alumno)->log.info(alumno.toString()));
     }
-    public static void readAlumnosSinPC(){
-        alumnoDao.readAlumnoSinPC().forEach((Alumno alumno)->log.info(alumno.toString()));
+    public static void buscarOrdenadorPorAlumno(){
+        try {
+            log.info(ordenadorDao.findById(alumnoDao.findById(leerDatos("id ")).getOrdenador().getIdPC()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void buscarAlumnoPorOrdenador(){
+        try {
+            log.info(alumnoDao.findById(ordenadorDao.findById(leerDatos("id ")).getAlumno().getIdAlumno()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static Ordenador readPCsinAlumnos(){
+        List<Ordenador> ordenadores = ordenadorDao.readSinAlumno();
+        Ordenador ordenador =new Ordenador();
+        if (!ordenadores.isEmpty()){
+            ordenador = ordenadores.get(0);
+        }
+        return ordenador;
+    }
+
+    public static void deleteAlumno(){
+        try {
+            Alumno alumno = alumnoDao.findById(leerDatos("id alumno"));
+        Ordenador ordenador = ordenadorDao.findById(alumno.getOrdenador().getIdPC());
+        ordenador.setAlumno(null);
+        ordenadorDao.updatePCNoDelete(ordenador);
+        alumnoDao.delete(alumno);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

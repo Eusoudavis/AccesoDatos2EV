@@ -34,11 +34,18 @@ public class AlumnoDao {
         return alumnos;
     }
 
-    public List<Alumno> readAlumnoSinPC() {
+    public void delete(Alumno alumno) {
         conection();
-        TypedQuery<Alumno> consulta = em.createQuery("Select l from Alumno l where Ordenador.idPC = null ", Alumno.class);
-        List<Alumno> alumnos = consulta.getResultList();
+        Alumno  alumnoDelete = em.find(Alumno.class, alumno.getIdAlumno());
+        if (alumnoDelete != null ){
+            EntityTransaction tx = em.getTransaction();
+            tx.begin();
+            em.remove(alumnoDelete);
+            tx.commit();
+        }else {
+            System.out.println("Este empregado non existe");
+        }
         disconection();
-        return alumnos;
     }
+
 }

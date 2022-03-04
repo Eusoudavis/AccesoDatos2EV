@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 
 @Log4j2
 public class Main {
@@ -84,12 +83,15 @@ public class Main {
 
     public static void initJourney() {
         try {
+            lerTaxistasNonTraballando();
             TaxiDriver taxiDriver = taxiDriverLoxica.validateFindByDNI(leerDatos("DNI "));
             if (!taxiDriver.getDni().equals(null)) {
                 taxiDriverLoxica.validateUpdateTaxiDriverActive(taxiDriver.getDni());
             } else {
                 log.info("DNI NON ATOPADO");
             }
+            Boolean available = true;
+            taxiLoxica.validateTaxiAvailable(available).forEach((Taxi taxi)->log.info(taxi.toString()));
             Taxi taxi = taxiLoxica.validateFindByCarNumber(leerDatos("Matricula "));
             if (!taxi.getCarRegistrationNumber().equals(null)) {
                 taxiLoxica.validateUpdate(taxi.getCarRegistrationNumber());
@@ -102,6 +104,7 @@ public class Main {
             journey.setDate(LocalDate.now().toString());
             journey.setInitHour(LocalTime.now().toString());
             journeyLoxica.validateCreate(journey);
+            log.info("-----------INICIADA A XORNADA PARA O TAXISTA "+ journey.getTaxiDriver().getName()+", BOA SORTE!------------");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -109,6 +112,7 @@ public class Main {
 
     public static void endJourney() {
         try {
+            journeyLoxica.validateReadCurrentJourney().forEach((Journey journey)->log.info(journey.toString()));
             Journey journey = journeyLoxica.validateFindById(Long.valueOf(leerDatos("ID XORNADA ")));
             journey.setEndHour(LocalTime.now().toString());
             journeyLoxica.validateUpdateJourney(journey);
@@ -125,6 +129,9 @@ public class Main {
             } else {
                 log.info("MATRÍCULA NON ATOPADA");
             }
+
+            log.info("------XORNADA REMATADA PARA O TAXISTA "+journey.getTaxiDriver().getName() +"-------");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -132,6 +139,7 @@ public class Main {
 
     public static void lerParaCrer() {
         try {
+            journeyLoxica.validateRead().forEach((Journey journey)->log.info(journey.toStringTaxiAndTaxiDriver()));
             log.info(journeyLoxica.validateFindById(Long.valueOf(leerDatos("ID XORNADA "))));
         } catch (IOException e) {
             e.printStackTrace();

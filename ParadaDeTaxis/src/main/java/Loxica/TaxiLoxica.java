@@ -3,6 +3,8 @@ package Loxica;
 import Dao.TaxiDao;
 import Entities.Taxi;
 
+import java.util.List;
+
 public class TaxiLoxica {
     TaxiDao taxiDao = new TaxiDao();
 
@@ -20,5 +22,9 @@ public class TaxiLoxica {
 
     public Taxi validateFindByCarNumber(String matricula) {
         return taxiDao.findById(matricula);
+    }
+
+    public List<Taxi> validateTaxiAvailable(Boolean available) {
+        return taxiDao.readTaxi(available);
     }
 }

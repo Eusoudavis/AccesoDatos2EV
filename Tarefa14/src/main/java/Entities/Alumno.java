@@ -13,7 +13,7 @@ public class Alumno implements Serializable {
     private static final long serialVersionUID = 1749212192635233729L;
 
     @Id
-    @Column(name = "id_alumno", nullable = false)
+    @Column(name = "idAlumno", nullable = false)
     private String idAlumno;
 
     @Column(name = "nome", nullable = false)
@@ -22,7 +22,16 @@ public class Alumno implements Serializable {
     @Column(name = "telefono", nullable = false)
     private int telefono;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "idPC", referencedColumnName = "idPC")
     private Ordenador ordenador;
+
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "idAlumno='" + idAlumno + '\'' +
+                ", nome='" + nome + '\'' +
+                ", telefono=" + telefono +
+                '}';
+    }
 }

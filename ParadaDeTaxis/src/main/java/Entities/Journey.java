@@ -29,9 +29,21 @@ public class Journey implements Serializable {
 
     @Override
     public String toString() {
-        return "\nJourney{\n" +
+        return "Journey{" +
+                "id=" + id +
+                ", taxiDriver=" + taxiDriver +
+                ", taxi=" + taxi +
+                ", date='" + date + '\'' +
+                ", initHour='" + initHour + '\'' +
+                ", endHour='" + endHour + '\'' +
+                '}';
+    }
+
+    public String toStringTaxiAndTaxiDriver() {
+        return "\nJourney{\n" + "id=" + id + " " +
                 taxiDriver +
                 "\n" + taxi + "\n" +
                 '}';
     }
+
 }

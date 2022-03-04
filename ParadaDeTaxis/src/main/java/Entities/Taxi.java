@@ -2,10 +2,12 @@ package Entities;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.List;
 
 //De cada taxi: precio, matricula,numero de plazas.
 //Cando empeza o turno dun taxista asignaselle un dos taxis que non está sendo usado por naide. Cada taxista,

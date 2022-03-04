@@ -5,7 +5,6 @@ import Entities.TaxiDriver;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-
 import java.util.List;
 
 import static Connection.Connection.*;
@@ -27,14 +26,14 @@ public class TaxiDriverDao {
         return taxiDriver;
     }
 
-public List<TaxiDriver> readTaxiDriver(Boolean activo) {
-    conection();
-    TypedQuery<TaxiDriver> consulta=em.createQuery("Select l from TaxiDriver l where l.active =?1", TaxiDriver.class);
-    consulta.setParameter(1, activo);
-    List<TaxiDriver> taxiDrivers = consulta.getResultList();
-    disconection();
-    return taxiDrivers;
-}
+    public List<TaxiDriver> readTaxiDriver(Boolean activo) {
+        conection();
+        TypedQuery<TaxiDriver> consulta = em.createQuery("Select l from TaxiDriver l where l.active =?1", TaxiDriver.class);
+        consulta.setParameter(1, activo);
+        List<TaxiDriver> taxiDrivers = consulta.getResultList();
+        disconection();
+        return taxiDrivers;
+    }
 
 
     public void updateTaxiDriverIsEnable(String dni) {

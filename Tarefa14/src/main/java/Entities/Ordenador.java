@@ -2,10 +2,7 @@ package Entities;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 
@@ -18,11 +15,20 @@ public class Ordenador implements Serializable {
     @Column(name = "idPC", nullable = false)
     private String idPC;
     @Column(name = "marca", nullable = false)
-    private String marcar;
+    private String marca;
     @Column(name = "modelo", nullable = false)
     private String modelo;
 
-    @OneToOne(mappedBy = "ordenador")
+    @OneToOne
+    @JoinColumn(name = "idAlumno", referencedColumnName = "idAlumno")
     private Alumno alumno;
 
+    @Override
+    public String toString() {
+        return "Ordenador{" +
+                "idPC='" + idPC + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
+    }
 }
