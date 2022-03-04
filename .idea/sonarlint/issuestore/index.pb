@@ -33,3 +33,13 @@ Z
 Tarefa13/pom.xml,7\0\70893dcf2780f3935ac251c4bf9b7ce537364809
 @
 Tarefa12/pom.xml,a\4\a47e59c02cae5be59b7c6c991ebc84b1435dccb1
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+E
+ParadaDeTaxis/pom.xml,b\a\ba9d44df051468052afde6ad549396688d7e0094
+[
++Tarefa14/src/main/java/Entities/Alumno.java,4\b\4b9192bd2eee18cec90a58f0506b0e19ceab6627
+^
+.Tarefa14/src/main/java/Entities/Ordenador.java,3\9\39cd5fc30f03beec1129d8ebc6232f30bd69cdb7
+@
+Tarefa14/pom.xml,d\f\dfbbde31d652f61f284cba68ac97438953b4a98e
