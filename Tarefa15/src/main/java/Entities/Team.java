@@ -26,4 +26,11 @@ public class Team implements Serializable {
     @OneToMany(mappedBy = "team")
     private List<Player> players;
 
+    @Override
+    public String toString() {
+        return "-------------------Team{" +
+                "nie='" + nie + '\'' +
+                ", teamName='" + teamName + '\'' +
+                '}'+"------------------";
+    }
 }

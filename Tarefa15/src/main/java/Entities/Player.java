@@ -22,4 +22,14 @@ public class Player implements Serializable {
     @ManyToOne
     private Team team;
 
+    @Override
+    public String toString() {
+        return "---------------Player{" +
+                "nij='" + nij + '\'' +
+                ", playerName='" + playerName + '\'' +
+                ", maxScore='" + maxScore + '\'' +
+                '}'+"-----------------";
+    }
+
+
 }
