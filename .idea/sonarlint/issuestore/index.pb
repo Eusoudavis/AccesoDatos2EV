@@ -31,10 +31,6 @@ j
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 E
 ParadaDeTaxis/pom.xml,b\a\ba9d44df051468052afde6ad549396688d7e0094
-[
-+Tarefa14/src/main/java/Entities/Alumno.java,4\b\4b9192bd2eee18cec90a58f0506b0e19ceab6627
-^
-.Tarefa14/src/main/java/Entities/Ordenador.java,3\9\39cd5fc30f03beec1129d8ebc6232f30bd69cdb7
 @
 Tarefa14/pom.xml,d\f\dfbbde31d652f61f284cba68ac97438953b4a98e
 Z
@@ -65,11 +61,49 @@ b
 2ParadaDeTaxis/src/main/java/Dao/TaxiDriverDao.java,3\f\3fb3e4761d1037e4608b171c7037a6356b58dee9
 d
 4ParadaDeTaxis/src/main/java/Entities/TaxiDriver.java,f\a\fa98eb77fba751848c400facfa7368e7f0718a74
-Z
-*Tarefa12/src/main/java/Entity/Enchido.java,0\5\05e8f4784acd014a797b1eb0e6f107a64e4dead1
 b
 2Tarefa12/src/main/java/Entity/TipoCombustible.java,0\8\08f9853af2194ac27482f9facbc09c71414b1f8e
 ^
 .ParadaDeTaxis/src/main/java/Entities/Taxi.java,0\0\0083b46690308bbc10a7afa4c84e446339078d86
 Y
+)Tarefa15/src/main/java/Entities/Team.java,f\9\f97856db4c5d50e78e9a01a753a799926c5adbe5
+[
++Tarefa15/src/main/java/Entities/Player.java,e\c\ec997e22faa76e3f09f17d70535a593140ebccce
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+W
+'Tarefa15/src/main/java/Dao/TeamDao.java,8\a\8a199aa30a39cc34e36387c858bb531ea94e0eec
+Y
+)Tarefa15/src/main/java/Dao/PlayerDao.java,8\1\81fc0c0fc2887184593bf65d43af72407691eb90
+P
+ Tarefa15/src/main/java/Main.java,e\c\ecb19e3eae06262000caf4a063d42e24bdf1a09c
+@
+Tarefa16/pom.xml,6\a\6a531f93cb225c5e48e67e7ca8e628e7302cce29
+a
+1Tarefa16/src/main/java/Connection/Connection.java,d\7\d762a3dfeed3746fc657b1cd6129d03198807412
+a
+1ParadaDeTaxis/src/main/java/Entities/Journey.java,7\c\7c229dec5adc230373a4af5f0651a089b18a6157
+P
+ Tarefa13/src/main/java/Main.java,f\9\f99a2f20fd4ef035f50734dd983a537d332e2cfa
+P
+ Tarefa14/src/main/java/Main.java,3\d\3d32bb2f98f06b2e6cc9ed2862b4cf9b5bcfd72a
+@
+Tarefa15/pom.xml,9\8\984eab3f2b83cd1c9881e5a76e84642401efd42a
+_
+/Tarefa13/src/main/java/Entities/TaxiDriver.java,2\5\258ba2352209c1e79f9dc83d37057518f434de7e
+[
++Tarefa14/src/main/java/Entities/Alumno.java,4\b\4b9192bd2eee18cec90a58f0506b0e19ceab6627
+^
+.Tarefa14/src/main/java/Entities/Ordenador.java,3\9\39cd5fc30f03beec1129d8ebc6232f30bd69cdb7
+Y
+)Tarefa13/src/main/java/Entities/Taxi.java,8\a\8ad4b935fde461db79317832e08981d48a46571a
+Z
+*Tarefa12/src/main/java/Entity/Enchido.java,0\5\05e8f4784acd014a797b1eb0e6f107a64e4dead1
+Z
+*Tarefa12/src/main/java/Entity/Factura.java,7\8\78003e7c0709affb035c3362cbd1753b4de8321a
+Y
 )Tarefa12/src/main/java/Entity/Persoa.java,f\4\f4cad2ee8574298f65c88fb7f54c6a2a1b81c9ea
+\
+,Tarefa12/src/main/java/Entity/Repostaxe.java,7\f\7feb249fad116bee3dc8341478682986b4e57fc0
+P
+ Tarefa12/src/main/java/Main.java,8\4\84b138dd6e9fe182d8a238ebb8a93d07d328d46f

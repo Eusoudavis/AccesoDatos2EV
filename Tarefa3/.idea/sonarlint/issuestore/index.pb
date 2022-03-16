@@ -7,3 +7,5 @@ G
 src/main/java/Main.java,e\4\e44a8606ce010ad9b89aafdfcee2ab49afbf6d10
 J
 src/main/java/Dao/Dao.java,f\5\f53c55be04a43a5e47d98c1f3060ae24c9ba77ca
+S
+#src/main/java/Entity/Empregado.java,4\c\4c982e198ff18659cbdef8ab6192b2da7bdaf65c

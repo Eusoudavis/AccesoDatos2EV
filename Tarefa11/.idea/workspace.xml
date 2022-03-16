@@ -5,7 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6fa83c1-25d3-45ea-b64f-aef9b4ee24dd" name="Changes" comment="Create DAOs and Menu into Main class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/0/0/0083b46690308bbc10a7afa4c84e446339078d86" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/0/5/0589ce58f9c4d672f4734ab1807e8ab1f21375e2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/0/5/05e8f4784acd014a797b1eb0e6f107a64e4dead1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/0/8/08f9853af2194ac27482f9facbc09c71414b1f8e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/0/9/09b3d57c4b9c7fcac1185906265dbb55f858ccb9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/1/7/1740be881b46d13285760e0df35b8186da44743b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/2/9/294248cd99d84ac4f2d582a0f009dd5e917cfc70" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/2/f/2f0df0cf4a0a138bc9de64405cfce7443219d3af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/3/b/3b877fe34d7e941aad1ff973b4847eb527e368e1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/3/f/3fb3e4761d1037e4608b171c7037a6356b58dee9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/7/1/71d404c16ddb19e5dd4a73ff4e87fe008c454de8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/7/5/75bc24806346db5b943c06a63d69363e7cc6d2af" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/7/7/775daf4e74bf24f3048e2671b8fb2c01ee1ffc52" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/7/7/77b2a3e33e29330ab141d14bed53b41c7d7cbb54" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/9/7/9780b75237576851afe2efece11bffb24ae168f5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/b/a/ba9d44df051468052afde6ad549396688d7e0094" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/f/4/f4cad2ee8574298f65c88fb7f54c6a2a1b81c9ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/f/a/fa98eb77fba751848c400facfa7368e7f0718a74" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/f/e/fe33f1bcdda33030832b2951cf48a9f44bdc5302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Connection/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Dao/DragonDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Dao/GoodCharacterDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Dao/ResurrectionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Entities/Dragon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Entities/GoodCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Entities/MainCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Entities/Resurrection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/resources/log4j2-test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DragonBall/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/java/Connection/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/java/Dao/HouseDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/java/Dao/PlayerDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/java/Entities/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/java/Entities/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/resources/log4j2-test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Tarefa16/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa10/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tarefa11.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa12/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa12/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/0/b/0be4065e18d9e53537ead334e0bb5371394672c0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/0/d/0d4cfea73fca6562548f7d85afadce3c3bd8e925" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/3/6/3614101deb74fdf4281cc710a653acfabca95e85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/a/7/a7bffe6e3b8c2552d21e1356bdb952d306f1ec54" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/b/5/b5ea7764cdb61de6f4ea7266ff2d1d9d59ef1973" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa13/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../Tarefa3/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../biblioteca/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../biblioteca/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +106,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tarefa10/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunAnythingCache">

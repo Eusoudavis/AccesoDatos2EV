@@ -10,6 +10,7 @@
         <module name="Tarefa13" />
         <module name="Tarefa10" />
         <module name="Tarefa11" />
+        <module name="Tarefa16" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -20,6 +21,7 @@
       <module name="Tarefa13" target="17" />
       <module name="Tarefa14" target="17" />
       <module name="Tarefa15" target="17" />
+      <module name="Tarefa16" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
